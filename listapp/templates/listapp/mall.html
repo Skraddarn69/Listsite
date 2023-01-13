@@ -18,12 +18,13 @@
   <!-- Navbar -->
 <ul>
     <li><a href="#">Hem</a></li>
-</ul>  {% if user.is_authenticated %}
-<li> <a href="#">Logga ut</a>
-      {% else %}
+    {% if user.is_authenticated %}
+      <li> <a href="#">Logga ut</a>
+    {% else %}
       <li>  <a href="#">Logga in</a></li>
       <li>  <a href="#">Registrera</a></li>
-      {% endif %}
+    {% endif %}
+</ul>  
 
   {% if messages %}
     {% for message in messages %}
