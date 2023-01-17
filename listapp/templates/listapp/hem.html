@@ -8,10 +8,10 @@
 
     <ul>
     {% for lista in listor %}
-        <li><a href="{% url 'lista-sida' lista.id %}">{{lista.namn}}</a></li>
+        <li><a href="{% url 'lista-sida' lista.id %}">{{lista.listname}}</a></li>
     {% endfor %}
     </ul>
-    <a class="btn btn-primary" href="#">Ny lista</a>
+    <a class="btn btn-primary" href="{% url 'lista-ny' %}">Ny lista</a>
 
 </div>
 {% endblock innehall %}

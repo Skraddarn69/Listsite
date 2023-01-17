@@ -18,22 +18,20 @@
   <!-- Navbar -->
   <nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><i class="bi bi-alarm"></i></a>
+      <a class="navbar-brand" href="{% url 'listor-hem' %}"><i class="bi bi-alarm"></i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse ms-auto" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#">Sammanfattning</a>
-          <a class="nav-link" href="#">Uppgifter</a>
-          <a class="nav-link" href="#">Kategorier</a>
+          <a class="nav-link active" aria-current="page" href="{% url 'listor-hem' %}">Listor</a>
         </div>
         <div class="navbar-nav ms-auto">
           {% if user.is_authenticated %}
-          <a class="nav-link" href="#">Logga ut</a>
+          <a class="nav-link" href="{% url 'loggaut' %}">Logga ut</a>
         {% else %}
-          <a class="nav-link" href="#">Logga in</a>
-          <a class="nav-link" href="#">Registrera</a>
+          <a class="nav-link" href="{% url 'loggain' %}">Logga in</a>
+          <a class="nav-link" href="{% url 'registrera' %}">Registrera</a>
         {% endif %}
         </div>
       </div>

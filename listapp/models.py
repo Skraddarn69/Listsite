@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from django.urls import reverse
 
 class List(models.Model):
     listname=models.CharField(max_length=255)
@@ -9,6 +10,9 @@ class List(models.Model):
 
     def __str__(self):
         return self.listname
+
+    def get_absolute_url(self):
+        return reverse('lista-sida',kwargs={'pk':self.pk})
 
 class Object(models.Model):
     objectname=models.CharField(max_length=255)
