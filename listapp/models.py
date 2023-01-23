@@ -22,3 +22,6 @@ class Object(models.Model):
 
     def __str__(self):
         return self.objectname
+
+    def get_absolute_url(self):
+        return reverse('lista-sida',kwargs={'pk':self.list.pk})

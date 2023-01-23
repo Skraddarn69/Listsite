@@ -24,14 +24,14 @@
         <tr>
             <td>{{ object.objectname }}</td>
             <td>{{ object.amount }}</td>
-            <td><a href="#"><i class="bi bi-pencil-square"></a></td>
-            <td><a href="#"><i class="bi bi-trash"></i></a></td>
+            <td><a href="{% url 'object-uppdatera' object.id %}"><i class="bi bi-pencil-square"></a></td>
+            <td><a href="{% url 'object-radera' object.id %}"><i class="bi bi-trash"></i></a></td>
         </tr>
         {% endfor %}
     </table>
 
     {% for lista in listan %}
-
+        <a class="btn btn-primary" href="{% url 'object-ny' lista.id %}">Ny vara</a>
     {% endfor %}
 
 </div>

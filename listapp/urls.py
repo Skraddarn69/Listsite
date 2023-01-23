@@ -14,4 +14,7 @@ urlpatterns = [
     path('lista/<int:pk>/radera/', views.RaderaLista.as_view(), name='lista-radera'),
     path('lista/ny/', views.SkapaLista.as_view(), name='lista-ny'),
 
+    path('object/<int:pk>/uppdatera/', views.UppdateraObject.as_view(), name='object-uppdatera'),
+    path('object/<int:pk>/radera/', views.RaderaObject.as_view(), name='object-radera'),
+    path('object/<int:l_pk>/ny/', views.SkapaObject.as_view(), name='object-ny'),
 ]
