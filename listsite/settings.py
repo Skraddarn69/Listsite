@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'listsite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'diyZsBLRNUP9ySdqLeCN',
+        'HOST': 'containers-us-west-29.railway.app',
+        'PORT': '7115',
     }
 }
 
